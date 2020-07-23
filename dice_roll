@@ -1,0 +1,40 @@
+import random
+def main():
+    player11 = input("enter player1 name:")
+    player1=0
+    player1wins = 0
+    player22 = input("enter player2 name:")
+    player2=0
+    player2wins = 0
+    rounds= 1
+
+    while rounds!=4:
+        print ( "Rounds " + str ( rounds )+"\n" )
+        player1= dice_roll()''
+        player2 = dice_roll ()
+        print(player11,"Roll :"+ str(player1))
+        print(player22," Roll :" + str(player2))
+
+        if player1 == player2:
+            print("draw!\n")
+        elif player1 > player2:
+            print(player11 ,"wins the round\n")
+            player1wins= player1wins+1
+        else:
+            print(Player22,"wins the round\n")
+            player2wins = player2wins+1
+        rounds+=1
+
+    if player1wins == player2wins:
+        print("draw")
+    elif player1wins > player2wins:
+        print(player11," wins ! the total round won:" + str(player1wins) )
+    else:
+        print ( player22," wins! the total round won:"+ str(player2wins))
+
+
+def dice_roll():
+    dice = random.randint(1, 6)
+    return dice
+
+main()
